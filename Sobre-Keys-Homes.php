@@ -10,7 +10,7 @@
       <p class="agradecimiento">Si deseas ver más de mis trabajos y proyectos, por favor presiona el botón que te redirigirá a mi página personal.</p>
 
 
-      <button class="WebSite" onclick="window.location.href='http://fercode.atwebpages.com/Index.php#about';">
+      <button class="WebSite" onclick="window.location.href='http://fercode.atwebpages.com';">
       Página personal
     </button>
 

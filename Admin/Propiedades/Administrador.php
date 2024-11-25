@@ -1,4 +1,13 @@
 <?php
+// Verificar si el usuario está autenticado
+$auth = isset($_SESSION['login']) ? $_SESSION['login'] : false;
+
+if (!$auth) {
+    // Redirigir a la página de inicio si no hay sesión iniciada
+    header('Location: /');
+    exit; // Detener ejecución después de la redirección
+}
+
 // Navegación
 include '../../includes/templades/Navegacion.php';
 
@@ -9,13 +18,6 @@ $exito = '';
 
 session_start(); // Iniciar sesión
 
-// Verificar si el usuario está autenticado
-$auth = isset($_SESSION['login']) ? $_SESSION['login'] : false; // Verifica si la clave existe
-$exito = 'Bienvenido al administrador';
-if (!$auth) {
-    // Redirigir a la página de inicio si no hay sesión iniciada
-    header('Location: /');
-}
 
 $query = "SELECT * FROM obras";
 
