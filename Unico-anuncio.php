@@ -4,7 +4,7 @@ include './includes/templades/Navegacion.php';
 
 
 <?php
-include './includes/Templades/Unico-AnuncioBD.php';
+include './includes/templades/Unico-AnuncioBD.php';
 ?>
 
 <!--footer.scss-->

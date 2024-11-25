@@ -13,7 +13,7 @@ if(!$id) {
 }
 
 //Escribir el Query
-$query = "SELECT * FROM obras WHERE id = ${id}";
+$query = "SELECT * FROM obras WHERE id = {$id}";
 
 //Consultar la Base de datos
 $ConsultaBD = mysqli_query($DB, $query);
