@@ -23,7 +23,7 @@ if(!$id) {
 }
 
 //Obtener los datos de la obra actual
-$consulta = "SELECT * FROM obras WHERE id = ${id}";
+$consulta = "SELECT * FROM obras WHERE id = {$id}";
 $datos = mysqli_query($DB, $consulta);
 $resultado = mysqli_fetch_assoc($datos);
 
