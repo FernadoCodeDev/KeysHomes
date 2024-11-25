@@ -62,7 +62,7 @@ if (!empty($errores)) {
 <main class="contenedor">
   <h1>Administrador de Keys Homes</h1>
 
-  <a href="/Admin/Propiedades/crear.php" class="boton-tomato-inline-block">Crear una Nueva Propiedad</a>
+  <a href="/Admin/propiedades/crear.php" class="boton-tomato-inline-block">Crear una Nueva Propiedad</a>
 
 </main>
 
@@ -83,9 +83,8 @@ if (!empty($errores)) {
         </div>
 
         <div class="boton-adminPHP">
-          <a href="/Admin/Propiedades/Actualizar.php?id=<?php echo $obra['id']; ?>" class="boton-Actualizar-AdminPHP">Actualizar</a>
+          <a href="/Admin/propiedades/Actualizar.php?id=<?php echo $obra['id']; ?>" class="boton-Actualizar-AdminPHP">Actualizar</a>
 
-          <!-- Nuevas etiquetas -->
           <form method="post" class="form-bt-eliminar">
               <input type="hidden" name="id" value="<?php echo $obra['id'];?>">
             <input type="submit" class="boton-Eliminar-AdminPHP" value="Eliminar">
