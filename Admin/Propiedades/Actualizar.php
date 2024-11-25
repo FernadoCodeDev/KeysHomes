@@ -1,16 +1,16 @@
 <?php
 
+$auth = isset($_SESSION['login']) ? $_SESSION['login'] : false;
+
+if (!$auth) {
+    // Redirigir a la página de inicio si no hay sesión iniciada
+    header('Location: /');
+    exit; // Detener ejecución después de la redirección
+}
 require '../../includes/Config/DataBases.php';
 
 include '../../includes/templades/Navegacion.php';
 
-session_start(); 
-
-$auth = isset($_SESSION['login']) ? $_SESSION['login'] : false; // Verifica si la clave existe
-
-if (!$auth) {
-    header('Location: /');
-}
 
 $DB = conectarDB(); 
 
