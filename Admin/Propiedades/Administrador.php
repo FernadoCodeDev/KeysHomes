@@ -2,11 +2,10 @@
 // Navegación
 include '../../includes/templades/Navegacion.php';
 
-// Conexión a la base de datos
 require '../../includes/Config/DataBases.php';
-$DB = conectarDB(); // Base de datos conectada 
+$DB = conectarDB(); 
 
-$exito = ''; // Variable para el mensaje de éxito
+$exito = ''; 
 
 session_start(); // Iniciar sesión
 
@@ -17,9 +16,6 @@ if (!$auth) {
     // Redirigir a la página de inicio si no hay sesión iniciada
     header('Location: /');
 }
-
-
-//Escribir el Query
 
 $query = "SELECT * FROM obras";
 
@@ -35,19 +31,19 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
   if($id) {
 
     //Eliminar el archivo
-    $query = "SELECT imagen FROM obras WHERE id = ${id}";
+    $query = "SELECT imagen FROM obras WHERE id = {$id}";
 
     $resultado = mysqli_query($DB, $query);
     $obra = mysqli_fetch_assoc($resultado);
 
     unlink('../../imagenesBD/' . $obra['imagen']);
 
-    //Eliminar la obra
-    $query = "DELETE FROM obras WHERE id = ${id}";
+    //Eliminar la propiedad
+    $query = "DELETE FROM obras WHERE id = {$id}";
    $resultado = mysqli_query($DB, $query);
    
    if($resultado) {
-    header('location: /Admin/Propiedades/Administrador.php');
+    header('location: /Admin/propiedades/Administrador.php');
    }
   }
 }
@@ -70,7 +66,6 @@ if (!empty($errores)) {
 
 </main>
 
-<!--AdministradorPHP.Scss-->
 <section class="seccion contenedor">
   <div class="contenedor-publicaciones-AdminPHP">
 

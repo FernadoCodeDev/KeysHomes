@@ -1,15 +1,14 @@
 <?php
-//Conexion a la base de datos
-include  __DIR__ . '/../Config/DataBases.php';
-$DB = conectarDB(); // Base de datos conectada 
 
-//Validar ID
+include  __DIR__ . '/../Config/DataBases.php';
+$DB = conectarDB(); 
+
 $id = $_GET['id'];
 $id = filter_var($id, FILTER_VALIDATE_INT);
 
 if(!$id) {
     header('Location: /');
-    exit; // Asegurarte de que el script no siga ejecutándose si no hay un ID válido
+    exit; 
 }
 
 //Escribir el Query
@@ -29,8 +28,7 @@ if ($ConsultaBD) {
 <section class="seccion contenedor">
     <h1>Conoce mejor la propiedad</h1>
     <div class="contenedor-unico-anuncio">
-        <?php if ($obra): ?> <!-- Verifica si hay una obra válida -->
-            <!-- Unico Anuncio-->
+        <?php if ($obra): ?>
             <div class="anuncio">
                 <img src="../../imagenesBD/<?php echo $obra['imagen']; ?>" alt="Obra">
 
