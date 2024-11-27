@@ -1,65 +1,49 @@
 <?php
-// Verificar si el usuario está autenticado
-$auth = isset($_SESSION['login']) ? $_SESSION['login'] : false;
+session_start(); // Iniciar sesión
 
-if (!$auth) {
+// Verificar si el usuario está autenticado
+if (empty($_SESSION['login'])) {
     // Redirigir a la página de inicio si no hay sesión iniciada
     header('Location: /');
     exit; // Detener ejecución después de la redirección
 }
 
+// Conexión a la base de datos
+include '../../includes/Config/DataBases.php';
+$DB = conectarDB(); 
+
 // Navegación
 include '../../includes/templades/Navegacion.php';
 
-require '../../includes/Config/DataBases.php';
-$DB = conectarDB(); 
-
-$exito = ''; 
-
-session_start(); // Iniciar sesión
-
-
 $query = "SELECT * FROM obras";
-
-//Consultar la Base de datos
-
 $ConsultaBD = mysqli_query($DB, $query);
 
-if($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-  $id = $_POST['id'];
-  $id = filter_var($id, FILTER_VALIDATE_INT);
+    $id = filter_var($_POST['id'], FILTER_VALIDATE_INT);
 
-  if($id) {
+    if ($id) {
+        // Eliminar el archivo de imagen
+        $query = "SELECT imagen FROM obras WHERE id = {$id}";
+        $resultado = mysqli_query($DB, $query);
+        $obra = mysqli_fetch_assoc($resultado);
 
-    //Eliminar el archivo
-    $query = "SELECT imagen FROM obras WHERE id = {$id}";
+        if ($obra && file_exists('../../imagenesBD/' . $obra['imagen'])) {
+            unlink('../../imagenesBD/' . $obra['imagen']);
+        }
 
-    $resultado = mysqli_query($DB, $query);
-    $obra = mysqli_fetch_assoc($resultado);
+        // Eliminar la propiedad
+        $query = "DELETE FROM obras WHERE id = {$id}";
+        $resultado = mysqli_query($DB, $query);
 
-    unlink('../../imagenesBD/' . $obra['imagen']);
-
-    //Eliminar la propiedad
-    $query = "DELETE FROM obras WHERE id = {$id}";
-   $resultado = mysqli_query($DB, $query);
-   
-   if($resultado) {
-    header('location: /Admin/propiedades/Administrador.php');
-   }
-  }
+        if ($resultado) {
+            header('Location: /Admin/propiedades/Administrador.php');
+            exit;
+        }
+    }
 }
-
-// Mostrar los mensajes de error o éxito
-if (!empty($errores)) {
-  foreach ($errores as $error) {
-      echo "<p class='mensaje-error'>$error</p>";
-  }
-} else if ($exito) {
-  echo "<p class='mensaje-exito'>$exito</p>"; 
-}
-
 ?>
+
 
 <main class="contenedor">
   <h1>Administrador de Keys Homes</h1>

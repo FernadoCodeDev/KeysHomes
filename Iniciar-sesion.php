@@ -11,7 +11,6 @@ include './includes/templades/Navegacion.php';
 
 // Autenticar el usuario
 $errores = []; // Variable para el mensaje de error
-$exito = ''; // Variable para el mensaje de éxito
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -31,17 +30,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $query = "SELECT * FROM usuarios WHERE email = '{$email}'";
         $resultado = mysqli_query($DB, $query);
 
-        if (!$resultado) {
-            die("Error en la consulta: " . mysqli_error($DB));
-        }
-
-        if ($resultado->num_rows) {
+        if ($resultado && $resultado->num_rows) {
             $usuario = mysqli_fetch_assoc($resultado);
             $auth = password_verify($password, $usuario['password']);
             if ($auth) {
+                // Establecer las variables de sesión
                 $_SESSION['usuario'] = $usuario['email'];
                 $_SESSION['login'] = true;
+
+                // Redirigir al administrador
                 header('Location: Admin/propiedades/Administrador.php');
+                exit;
             } else {
                 $errores[] = "El password es incorrecto";
             }
@@ -51,14 +50,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
+// Mostrar los mensajes de error
 if (!empty($errores)) {
     foreach ($errores as $error) {
         echo "<p class='mensaje-error'>$error</p>";
     }
-} else if ($exito) {
-    echo "<p class='mensaje-exito'>$exito</p>";
 }
 ?>
+
 
 <section class="nosotros">
 

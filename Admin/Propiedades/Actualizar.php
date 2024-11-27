@@ -1,8 +1,9 @@
 <?php
 
-$auth = isset($_SESSION['login']) ? $_SESSION['login'] : false;
+session_start(); // Iniciar sesión
 
-if (!$auth) {
+// Verificar si el usuario está autenticado
+if (empty($_SESSION['login'])) {
     // Redirigir a la página de inicio si no hay sesión iniciada
     header('Location: /');
     exit; // Detener ejecución después de la redirección
