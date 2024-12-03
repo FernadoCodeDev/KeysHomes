@@ -1,0 +1,220 @@
+h1 {
+    text-align: center;
+}
+
+.formulario-crear-propiedad {
+    margin: 1rem 1rem 5rem 1rem;
+    padding: 1rem;
+    background-color: #333333;
+    border-radius: 2vh;
+    box-shadow: 1rem 1rem #b4b4b4;
+    width: 94%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+    @include tablet {
+        width: 98%;
+        padding: 2rem;
+    }
+
+    .text-form {
+        display: flex;
+        justify-content: center;
+        font-size: 1rem;
+        color: $blanco;
+        font-weight: bold;
+        @include tablet {
+            font-size: 6rem;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        
+
+        @include laptop {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        //apartado de imagen
+        .Img-propiedad {
+            justify-content: center;
+            text-align: center;
+            color: $blanco;
+
+            legend {
+            text-align: center;
+            font-size: 1.5rem;
+            color: $blanco;
+            font-weight: bold;
+            @include tablet{
+            font-size: 2.5rem;
+                }
+            }
+
+            .imagenpreview {
+                //display: none;
+                width: 90%;
+                height: auto;
+                margin: 1rem;
+                
+            }    
+
+            .file-upload {
+                overflow: hidden;
+                display: inline-block;
+                margin-top: 1rem;
+                @include laptop {
+                    display: flex;
+                    width: 123.5%;
+                }
+
+                input[type="file"] {
+                opacity: 0;
+                cursor: pointer;
+                }
+            
+                .custom-file-upload {
+                    display: block;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                    background-color: #e74c3c; 
+                    color: white; 
+                    font-size: 2rem;
+                    border-radius: 2vh;
+                    transition: background-color 0.5s; 
+
+                    @include laptop {
+                        margin-left: 5rem;
+                        width: 123.5%;
+                        font-size: 4rem;
+                        border-radius: 4vh;
+                    }
+                } 
+                
+                .custom-file-upload:hover {
+                    background-color: darken(#e74c3c, 10%); /* Color al pasar el mouse */
+                }
+            }
+        }
+
+        //apartado de datos de la propiedad/imagen
+
+        .Informacion-de-la-propiedad {
+            @include laptop {
+                margin-top: 3.5rem;
+            }
+            label {
+                font-size: 2rem;
+                color: $blanco;
+                font-weight: bold;
+            }
+            input {
+                width: 92%;
+                padding: 1rem ;
+                font-size: 1.5rem;
+                border: none;
+                outline: none;
+                border-radius: 2vh;  
+                margin-bottom: 1rem;
+                @include laptop {
+                    width: 96%;
+                    font-size: 3rem;
+                    margin-bottom: 5rem;
+                }
+            }
+
+            textarea {
+                width: 92%;
+                height: 4rem;
+                margin-bottom: 1rem;
+                padding: 1rem ;
+                font-size: 1rem;
+                border: none;
+                outline: none;
+                border-radius: 2vh;
+                resize: none;
+                @include laptop {
+                    height: 30rem;
+                    font-size: 1.5rem;
+                }
+
+                @include desktop {
+                    width: 96%;
+                    height: 40rem;
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .Informacion-del-vendedor {
+            label {
+                font-size: 2rem;
+                color: $blanco;
+                font-weight: bold;
+            }
+            input {
+                width: 92%;
+                padding: 1rem ;
+                font-size: 1.5rem;
+                border: none;
+                outline: none;
+                border-radius: 2vh;  
+                margin-bottom: 1rem;
+                @include tablet {
+                    width: 96%;
+                    font-size: 3rem;
+                }
+
+                @include laptop {
+                    width: 92%;
+                    font-size: 3rem;
+                }
+            }
+        }
+
+        .Boton-enviar-propiedad {
+            margin-top: 1rem;
+            border-radius: 2vh;
+            color: $blanco;
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 1rem;
+            background-color: #16a085;
+            border: none;
+            
+            cursor: pointer;
+
+            @include laptop {
+                font-size: 5rem;
+                border-radius: 4vh;    
+            }
+           
+            &:hover {
+                transition: background-color 1s; 
+                background-color: darken(#16a085, 10%);
+            }
+
+        }
+        
+    }
+}
+
+.mensaje-error {
+    text-align: center;
+    background-color: $Tomato;
+    color: $blanco;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.mensaje-exito {
+    text-align: center;
+    background-color: $SeaGreen;
+    color: $blanco;
+    font-weight: bold;
+    padding: 1rem;
+}

@@ -1,0 +1,40 @@
+$Fuente_Principal: "dream-orphans";
+
+@font-face {
+  font-family: "dream-orphans";
+  src: url(/src/Font/dream-orphans.bold.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Tamaño de Media Queries
+$telefono: 480px;
+$tablet: 768px;
+$laptop: 1200px;
+$desktop: 1680px;
+
+// Colores
+$negro: #000000;
+$Charcoal: #1a1a1a;
+$grisOscuro: #333333;
+$amarillo: #E08709;;
+$Golden: #efb810;
+$lightMustardYellow: #fcc922;
+$verde: #71B100;
+$greenAqua: #9bc7b8;
+$SeaGreen: #16a085;
+$GreenPine: #122a29;
+$Tomato: #e74c3c;
+$deepRed: #fa0808;
+$dodgerBlue: #1E90FF;
+$gris: #e1e1e1;
+$blanco: #FFFFFF;
+
+
+$separacion: 5rem;
+
+// Fuentes
+$delgada: 300;
+$regular : 400;
+$bold: 700;
+$black: 900

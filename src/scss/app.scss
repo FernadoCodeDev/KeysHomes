@@ -1,0 +1,37 @@
+//base
+
+@import 'base/normalize';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/darkMode';
+@import 'base/botones';
+
+//Paginas internas 
+@import 'internas/Blog'; //Blog.PHP
+@import 'internas/propiedades'; //Propiedades.php
+@import 'internas/registro'; //registro.php
+@import 'internas/SobreKeysHomes'; //SobreKeysHomes.php
+@import 'internas/unicoAnuncio'; //Unico Anuncio.PHP
+@import 'internas/Contacto'; //Unico Anuncio.PHP
+
+
+
+//Admin/Propiedades/archivos PHP
+@import 'internas/crearPHP'; //crear.php
+@import 'internas/AdministradorPHP'; //Administrador.php
+
+//layout
+@import 'layout/header'; //index.html
+@import 'layout/Data-KeysHomes'; //index.html
+@import 'layout/anuncios'; //index.html
+@import 'layout/FondoSecundario'; //index.html
+@import 'layout/inferior'; //index.html
+@import 'layout/testimoniales'; //index.html
+@import 'layout/Navegacion'; // todas las paginas excepto index.html y registro.html
+@import 'layout/footer'; //todas las paginas
+
+
+
+
+
+//Keys

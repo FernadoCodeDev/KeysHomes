@@ -1,0 +1,45 @@
+h1 {
+    color: $negro;
+    font-size: 5rem;
+    font-weight: bold;
+    font-family: $Fuente_Principal;
+    }
+
+.contenedor-unico-anuncio{
+    background-color: $gris;
+    border: 1px solid $grisOscuro;
+    margin-bottom: 2rem;
+
+    .anuncio {
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .resumen-anuncio{
+            padding: 2rem;
+            h3 {
+                margin: 0;
+                font-weight: bold;
+                font-size: 1rem;
+
+                @include laptop {
+                font-size: 3rem;
+                }
+            }
+            p {
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 2rem 0 0 0;
+            }
+            .price {
+            text-align: end;
+            color: $SeaGreen;
+            font-weight: bold;
+            font-size: 3rem;
+            }
+        }
+
+    }
+    
+}

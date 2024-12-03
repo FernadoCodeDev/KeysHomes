@@ -1,0 +1,133 @@
+.contenedor-publicaciones-AdminPHP {
+    margin: 1rem;
+    @include grid(1, 1rem);
+}
+
+@include laptop {
+    .contenedor-publicaciones-AdminPHP {
+        @include grid(2, 1rem);
+    }
+}
+
+@include desktop {
+    .contenedor-publicaciones-AdminPHP {
+        @include grid(3, 1rem);
+    }
+}
+
+.anuncio-AdminPHP{
+    width: 100%;
+    height: auto;
+    background-color: $grisOscuro;
+    border: 1px solid $negro;
+    
+    .image-adminPHP {
+        width: 100%;
+        height: 25rem;
+    }
+    
+
+    .titulo-AdminPHP {
+        color: $blanco;
+        font-weight: bold;
+        font-family: $Fuente_Principal;
+        padding: 0.5rem;
+        margin-top: 0.5rem;
+        line-height: 1;
+        font-family: 1rem;
+
+    }
+
+    .descripcion-AdminPHP {
+        color: $blanco;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .id-and-precio {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .precio-AdminPHP {
+            color: $SeaGreen;
+            font-weight: bold;
+            padding-left: 1rem;
+            font-size: 3rem;
+        }
+    
+        /*.id-AdminPHP {
+            color: $Tomato;
+            font-weight: bold;
+            padding-right: 1rem;
+            font-size: 3rem;
+        }*/
+    
+    }
+   
+    .boton-adminPHP {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+    
+        /* Aplica a ambos elementos: a y input[type="submit"] */
+        a, input[type="submit"] {
+            width: 90%;
+            text-align: center;
+            color: $blanco;
+            font-weight: bold;
+            font-size: 2rem;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none; /* Esto no afecta al input, pero es necesario para el enlace */
+            border-radius: 4vh;
+            padding: 1rem;
+            margin: 1rem;
+            cursor: pointer; /* Asegura que el cursor de mano aparezca también para el botón */
+        }
+    
+        /* Estilos para el botón "Actualizar" */
+        .boton-Actualizar-AdminPHP {
+            background-color: $dodgerBlue;
+            border: #1365b6 solid 0.5rem;
+    
+            &:hover {
+                transition: background-color 1s, border-color 1s;
+                background-color: darken($dodgerBlue, 15%);
+                border-color: #0c4175;
+            }
+        }
+    
+        /* Estilos para el botón "Eliminar" */
+        .boton-Eliminar-AdminPHP {
+            background-color: $deepRed;
+            border: #c90000 solid 0.5rem;
+
+    
+            &:hover {
+                transition: background-color 1s, border-color 1s;
+                background-color: darken($deepRed, 15%);
+                border-color: darken(#c90000, 15%);
+            }
+        }
+    }
+    
+}
+
+
+/*
+
+.propiedades {
+  background-color: $gris;
+  border: 1px solid $grisOscuro;
+  padding: 1rem;
+  margin: 0 1rem 1.5rem 1rem;
+  margin-bottom: 1.5rem; // Espacio entre los bloques en la vista de masonry
+  break-inside: avoid; // Evitar que se corten los elementos
+}
+
+.propiedades img {
+  width: 100%;
+  height: 25rem;
+}*/

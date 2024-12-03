@@ -1,0 +1,153 @@
+.Sobre-Keys-Homes{
+    text-align: center;
+    color: $black;
+    font-size: 5rem;
+    font-weight: bold;
+    font-family: $Fuente_Principal;
+}
+
+
+.WebSite {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  background-color: $GreenPine;
+  border: $blanco solid 2px;
+  color: $Golden;
+  font-size: 1.5rem;
+  padding: 1rem;
+  font-family: $Fuente_Principal;
+  text-align: center;
+  width: 95%;
+  cursor: pointer;
+  transition: 1.5s;
+
+  &:hover {
+  color: $GreenPine;
+  background-color: $Golden;
+  border: $GreenPine solid 2px;
+
+  }
+
+}
+
+
+
+.formulario-sugerencias {
+    margin-bottom: 2rem;
+    background-color: #f1f1f1;
+    padding: 2rem;
+    border-radius: 2vh;
+    box-shadow: 1rem 1rem #b4b4b4;
+    width: 100%;
+    margin: 2rem auto;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  
+    form {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+  
+      @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+        .sugerencia {
+          grid-column: span 2;
+
+        }
+      }
+  
+      .user-box {
+        position: relative;
+      }
+  
+      .user-box input,
+      .user-box textarea {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #000; // Cambia al color de texto deseado
+        border: none;
+        border-bottom: 1px solid #000;
+        outline: none;
+        background: transparent;
+      }
+  
+      .user-box label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #000; // Asegúrate de que el color sea consistente con el diseño
+        pointer-events: none;
+        
+        transition: 1s;
+      }
+  
+      .user-box input:focus ~ label,
+      .user-box input:valid ~ label,
+      .user-box textarea:focus ~ label,
+      .user-box textarea:valid ~ label {
+        top: -20px;
+        left: 0;
+        color: $grisOscuro;
+        font-size: 12px;
+      }
+      
+      // Estilo para el botón
+      .Enviar {
+        width: 100%;
+        background-color: $Tomato;
+        color: $blanco;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 1rem;
+        border: none;
+        border-radius: 2vh;
+        margin: 0 auto; // Asegura que el botón esté centrado por defecto
+        
+        &:hover {
+          background-color: darken($Tomato, 15%);
+          cursor: pointer;
+        }
+  
+        @include laptop {
+          width: 25%;
+          font-size: 2.5rem;
+          grid-column: span 2;
+        }
+      }
+    }
+  }
+
+.agradecimiento {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 1rem;
+    color: $black;
+    @include  desktop {
+        font-size: 3rem;
+    }    
+    
+}
+
+
+/*
+
+@include  tablet {
+} 
+
+@include  laptop{
+}   
+
+@include  desktop {
+}       
+
+*/
