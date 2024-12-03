@@ -1,7 +1,7 @@
 .footer {
   background-color: $GreenPine;
   padding: 2rem 0;
-  
+
   .contenedor-footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -35,7 +35,7 @@
       display: flex;
       flex-direction: column;
       justify-content: end;
-      margin-left: auto; 
+      margin-left: auto;
 
       @include laptop {
         flex-direction: row;

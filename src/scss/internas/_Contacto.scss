@@ -1,123 +1,128 @@
 .main-contact {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-h1, h2 {
-    text-align: center;
-    color: #333;
+h1,
+h2 {
+  text-align: center;
+  color: #333;
 }
 
 // Estilos específicos para el formulario de contacto
 .formulario-contacto {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .fieldset-contacto {
-    border: none;
-    margin-bottom: 20px;
+  border: none;
+  margin-bottom: 20px;
 
-
-    p {
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        color: #333;
-    }
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #333;
+  }
 }
 
 .legend-contacto {
-    font-family: $Fuente_Principal;
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: #333;
+  font-family: $Fuente_Principal;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
 }
 
 .form-contacto {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    .label-contacto {
-        padding: 1rem;
-        font-family: Arial, Helvetica, sans-serif;
-        margin-bottom: 5px;
-        color: #555;
-    }
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  .label-contacto {
+    padding: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 5px;
+    color: #555;
+  }
 }
 
-
-.input-contacto, .select-contacto, .textarea-contacto {
-    font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
+.input-contacto,
+.select-contacto,
+.textarea-contacto {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
 }
 
 .radio-contacto {
-    width: auto;
-    margin: 1rem;
+  width: auto;
+  margin: 1rem;
 }
 
 .textarea-contacto {
-    height: 150px;
-    resize: none;
+  height: 150px;
+  resize: none;
 }
 
 // Botón de enviar
 .submit-contacto {
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    padding: 15px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 
-    &:hover {
-        background-color: #0056b3;
-    }
+  &:hover {
+    background-color: #0056b3;
+  }
 }
 
 // Responsive: Estilos para móvil
 @include telefono {
-    .formulario-contacto {
-        padding: 15px;
-    }
+  .formulario-contacto {
+    padding: 15px;
+  }
 
-    .input-contacto, .select-contacto, .textarea-contacto {
-        font-size: 0.9rem;
-        padding: 8px;
-    }
+  .input-contacto,
+  .select-contacto,
+  .textarea-contacto {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
 
-    .submit-contacto {
-        font-size: 0.9rem;
-        padding: 12px;
-    }
+  .submit-contacto {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
 }
 
 // Responsive: Estilos para laptop
 @include laptop {
-    .formulario-contacto {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 4rem;
-    }
+  .formulario-contacto {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem;
+  }
 
-    .input-contacto, .select-contacto, .textarea-contacto {
-        font-size: 1.1rem;
-        padding: 12px;
-    }
+  .input-contacto,
+  .select-contacto,
+  .textarea-contacto {
+    font-size: 1.1rem;
+    padding: 12px;
+  }
 
-    .submit-contacto {
-        font-size: 1.1rem;
-        padding: 20px;
-    }
+  .submit-contacto {
+    font-size: 1.1rem;
+    padding: 20px;
+  }
 }

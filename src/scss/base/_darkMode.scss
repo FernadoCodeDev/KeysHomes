@@ -1,205 +1,206 @@
 // Icon Moon
-  .dark-mode-icon {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+.dark-mode-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 
-    
-    @include tablet{
+  @include tablet {
     flex-direction: row;
     justify-content: end;
     margin-top: -1rem;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    justify-content: end;
+    margin-top: -4rem;
+  }
+
+  .DarkMode {
+    width: 5rem;
+    height: auto;
+    margin: -12rem 0.5rem 0 0;
+    cursor: pointer;
+
+    @include tablet {
+      width: 6rem;
     }
 
-    @include desktop{
-        flex-direction: row;
-        justify-content: end;
-        margin-top: -4rem;
-        }
-
-    .DarkMode{
-        width: 5rem;
-        height: auto;
-        margin: -12rem 0.5rem 0 0;
-        cursor: pointer;
-
-        @include tablet {
-            width: 6rem;
-        }
-
-        @include desktop {
-            width: 8rem;
-        }
+    @include desktop {
+      width: 8rem;
     }
+  }
 }
 
 //DarkMode Function
 
 .DarkMode-function {
-    transition: background-color 1s, border-color 1s;
-    background-color: $Charcoal;
+  transition: background-color 1s, border-color 1s;
+  background-color: $Charcoal;
 
-    h5,h4,h3,h2,h1 {
-        color: $gris;
+  h5,
+  h4,
+  h3,
+  h2,
+  h1 {
+    color: $gris;
+  }
+  p {
+    color: $blanco;
+  }
+
+  //Index.php Anuncio
+  .anuncio {
+    background-color: $grisOscuro;
+    h3 {
+      color: $gris;
+    }
+    p {
+      color: $blanco;
+    }
+    .precio {
+      color: $Golden;
+    }
+  }
+
+  .texto-entrada {
+    h4 {
+      &::after {
+        content: "";
+        background-color: $Golden;
+      }
+    }
+    span {
+      color: $Golden;
+      font-weight: bold;
+    }
+  }
+
+  .testimoniales {
+    h3 {
+      color: $gris;
+    }
+    .testimonial {
+      background-color: $GreenPine;
+
+      .comillas {
+        filter: invert(0%);
+      }
+
+      .Text-testimonial {
+        color: $blanco;
+      }
+      .Autor-testimonial {
+        color: $blanco;
+      }
+    }
+  }
+
+  .propiedades {
+    background-color: $grisOscuro;
+    h3 {
+      color: $gris;
     }
     p {
       color: $blanco;
     }
 
-    //Index.php Anuncio 
-    .anuncio {
+    .precio {
+      color: $Golden;
+    }
+  }
+
+  //ARTISTAS.HTML
+  .Nuestros-blog {
+    color: $blanco;
+  }
+
+  .seccion-blog {
+    .texto-blog {
+      h4 {
+        &::after {
+          content: "";
+          background-color: $Golden;
+        }
+      }
+
+      span {
+        color: $Golden;
+      }
+    }
+  }
+
+  //SOBRE GALAXY GALLERY.HTML
+
+  .nosotros {
+    background-color: $Charcoal;
+
+    h1,
+    h2 {
+      color: $blanco;
+    }
+    .informacion,
+    .sobre-mi {
+      background-color: #333333;
+      box-shadow: 1rem 1rem #141414;
+    }
+
+    .informacion-de-mi {
+      background-color: #f1f1f1;
+      box-shadow: 1rem 1rem #b4b4b4;
+
+      .nombre {
+        color: $negro;
+      }
+
+      p {
+        color: $grisOscuro;
+      }
+
+      .JR {
+        color: $grisOscuro;
+      }
+
+      .Mis-proyectos {
+        color: $grisOscuro;
+      }
+
+      .Mis-proyectos:hover {
         background-color: $grisOscuro;
-        h3 {
-            color: $gris
-        }
-        p {
-            color: $blanco;
-        }
-        .precio {
-            color: $Golden;
-        }
-    }
-
-    .texto-entrada {
-        h4 {
-            &::after {
-            content: '';
-            background-color: $Golden;
-            }
-        }
-        span {
-            color: $Golden;
-            font-weight: bold;
-        }
-    }
-
-    .testimoniales {
-        h3 {
-            color: $gris;
-        }
-        .testimonial {
-            background-color: $GreenPine;
-
-            .comillas {
-                filter: invert(0%);
-            }
-
-            .Text-testimonial {
-                color: $blanco;
-            }
-            .Autor-testimonial {
-                color: $blanco;
-
-            }
-
-        }
-    }
-
-    //ARTE.HTML
-
-    .propiedades {
-    background-color: $grisOscuro;
-        h3 {
-            color: $gris;
-        }
-        p {
-            color: $blanco;
-        }
-
-        .precio {
-            color: $Golden;
-        }
-    }
-
-    //ARTISTAS.HTML
-    .Nuestros-blog {
         color: $blanco;
-    }
-
-    .seccion-blog {
-        .texto-blog {
-            h4 {
-                &::after {
-                    content: '';
-                    background-color: $Golden;
-                }
-            }
-    
-            span {
-                color: $Golden
-            }
-        }
-    }
-
-    //SOBRE GALAXY GALLERY.HTML
-
-    .nosotros{
-        background-color: $Charcoal;
-
-        h1, h2  {
-            color: $blanco;
-        }
-        .informacion, .sobre-mi {
-            background-color: #333333;
-            box-shadow: 1rem 1rem #141414;
-        }
-
-        .informacion-de-mi {
-            background-color: #f1f1f1;
-            box-shadow: 1rem 1rem #b4b4b4;
-            
-            .nombre{
-                color: $negro;
-            }
-
-            p {
-                color: $grisOscuro;
-            }
-
-            .JR {
-                color: $grisOscuro;
-            }
-
-            .Mis-proyectos{
-                color: $grisOscuro;
-            }
-
-            .Mis-proyectos:hover {
-                background-color: $grisOscuro;
-                color: $blanco;
-            }
-        }
-    }
-
-    .formulario-sugerencias {
-        background-color: #333333;
-        box-shadow: 1rem 1rem #141414;
-
-        .user-box input,
-        .user-box textarea {
-        color: $blanco; 
-        border-bottom: 1px solid $blanco;
       }
-
-      .user-box label {
-        color: $blanco 
-      }
-
-      .user-box input:focus ~ label,
-      .user-box input:valid ~ label,
-      .user-box textarea:focus ~ label,
-      .user-box textarea:valid ~ label {
-          color: $blanco;
-      }
-
-        .Enviar {
-            background-color: $SeaGreen;
-            &:hover {
-                background-color: darken($SeaGreen, 15%);
-                cursor: pointer;
-            }
-        }
     }
-    
-    //UNICO-ANUNCIO.HTML
+  }
+
+  .formulario-sugerencias {
+    background-color: #333333;
+    box-shadow: 1rem 1rem #141414;
+
+    .user-box input,
+    .user-box textarea {
+      color: $blanco;
+      border-bottom: 1px solid $blanco;
+    }
+
+    .user-box label {
+      color: $blanco;
+    }
+
+    .user-box input:focus ~ label,
+    .user-box input:valid ~ label,
+    .user-box textarea:focus ~ label,
+    .user-box textarea:valid ~ label {
+      color: $blanco;
+    }
+
+    .Enviar {
+      background-color: $SeaGreen;
+      &:hover {
+        background-color: darken($SeaGreen, 15%);
+        cursor: pointer;
+      }
+    }
+  }
+
+  //UNICO-ANUNCIO.HTML
 }

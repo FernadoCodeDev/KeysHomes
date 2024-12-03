@@ -26,8 +26,8 @@ include './includes/templades/header.php';
     <h2>Nuestras Propiedades</h2>
 
     <?php
-        $limite = 3;
-        include './includes/templades/anuncio.php';
+    $limite = 3;
+    include './includes/templades/anuncio.php';
     ?>
 
 

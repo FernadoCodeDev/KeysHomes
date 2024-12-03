@@ -2,9 +2,9 @@
 include './includes/templades/Navegacion.php';
 ?>
 
-    <?php
-        include './includes/templades/Propiedades.php';
-    ?>
+<?php
+include './includes/templades/Propiedades.php';
+?>
 
 <!--footer.scss-->
 <?php

@@ -3,47 +3,44 @@
 }
 
 .boton-tomato-block {
-    @include boton($Tomato, block);
+  @include boton($Tomato, block);
 }
 .boton-tomato-inline-block {
-    @include boton($Tomato, inline-block);
+  @include boton($Tomato, inline-block);
 }
 
 .boton-SeaGreen-block {
-    @include boton($SeaGreen, block);
-} 
+  @include boton($SeaGreen, block);
+}
 
 .boton-SeaGreen-inline-block {
-    @include boton($SeaGreen, inline-block);
-} 
-
+  @include boton($SeaGreen, inline-block);
+}
 
 .boton-dodgerBlue-block {
-    @include boton($dodgerBlue, block);
-} 
-
+  @include boton($dodgerBlue, block);
+}
 
 .boton-deepRed-block {
-    @include boton($deepRed, block);
-} 
+  @include boton($deepRed, block);
+}
 
 .boton-black-inline-block {
-    @include boton($grisOscuro, inline-block);
-} 
+  @include boton($grisOscuro, inline-block);
+}
 
 .boton-GreenPine-block {
-    @include boton($GreenPine, block);
-} 
+  @include boton($GreenPine, block);
+}
 
 .boton-GreenPine-inline-block {
-    @include boton($GreenPine, inline-block);
-} 
-
+  @include boton($GreenPine, inline-block);
+}
 
 //$GreenPine
 
 .alinear-derecha {
-    display: flex;
-    justify-content: end;
-    margin-top: 2rem;
+  display: flex;
+  justify-content: end;
+  margin-top: 2rem;
 }
