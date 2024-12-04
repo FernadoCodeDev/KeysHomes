@@ -3,8 +3,10 @@
     <nav>
       <a href="../../Propiedades.php">Propiedades</a>
       <a href="../../Blog.php">Blog</a>
-      <a href="../../Contacto.php">Contacto</a>
       <a href="../../Sobre-Keys-Homes.php">Nosotros</a>
+      <?php if ($auth): ?>
+        <a href="../../cerrar-sesion.php">Cerrar sesión</a>
+      <?php endif ?>
     </nav>
 
     <div class="social-icons">
