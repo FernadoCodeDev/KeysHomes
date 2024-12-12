@@ -197,79 +197,50 @@ html {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      margin: -1rem 1rem 0 1rem;
 
       @include tablet {
         flex-direction: row;
         justify-content: flex-end;
       }
 
-      @include laptop {
-        flex-direction: row;
-        justify-content: space-between;
-      }
-
-      .Ver-Propiedades {
-        font-family: $Fuente_Principal;
-        font-size: 1rem;
-        background-color: $greenAqua;
-        border-radius: 3vh;
-        border-style: none;
-        margin-bottom: 1rem;
-        padding: 1rem;
-
-        cursor: pointer;
-        &:hover {
-          transition: 1s ease;
-          background-color: #506b62;
-          color: $blanco;
-        }
-        a {
-          color: $blanco;
-          text-decoration: none;
-          padding: 1rem;
-        }
-
+      a {
         @include tablet {
           margin-right: 1rem;
-          margin-bottom: 0;
         }
-
-        @include laptop {
+        .Ver-Propiedades {
+          font-family: $Fuente_Principal;
+          font-size: 1rem;
+          background-color: $greenAqua;
+          border-radius: 3vh;
+          border-style: none;
+          margin-bottom: 1rem;
+          padding: 1rem;
           width: 100%;
-          height: auto;
+          transition: 1s ease;
+          cursor: pointer;
+          &:hover {
+            background-color: #506b62;
+            color: $blanco;
+          }
         }
       }
 
-      .Leer-más {
-        font-family: $Fuente_Principal;
-        font-size: 1rem;
-        background-color: transparent;
-        border: $blanco solid 0.2rem;
-        border-radius: 3vh;
-        padding: 1rem;
-
-        cursor: pointer;
-
-        &:hover {
-          transition: background-color 1s ease;
-          background-color: $blanco;
-        }
-
-        a {
+      a {
+        .Leer-más {
+          font-family: $Fuente_Principal;
+          font-size: 1rem;
+          background-color: transparent;
+          border: $blanco solid 0.2rem;
           color: $blanco;
-          text-decoration: none;
+          border-radius: 3vh;
           padding: 1rem;
-
+          width: 100%;
+          cursor: pointer;
+          transition: 1s ease;
           &:hover {
-            transition: color 1s ease;
+            background-color: $blanco;
             color: $negro;
           }
-        }
-
-        @include laptop {
-          width: 100%;
-          height: auto;
         }
       }
     }

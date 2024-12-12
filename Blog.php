@@ -7,7 +7,7 @@ include './includes/templades/Navegacion.php';
             <section>
                 <!-- Blog 1 -->
                 <article class="Entrada-blog">
-                    <img src="src/Image/Home 17.jpg" alt="Perfil 1">
+                    <img src="src/Image/Home 17.webp" alt="Perfil 1">
                     <div class="texto-blog">
                         <h4>Nuestra última propiedad</h4>
                         <p>Ubicada en: <span>Francia</span></p>
@@ -17,7 +17,7 @@ include './includes/templades/Navegacion.php';
 
                 <!-- Blog 2 -->
                 <article class="Entrada-blog">
-                    <img src="src/Image/Blog No.2.jpeg" alt="Perfil 1">
+                    <img src="src/Image/Blog No.2.webp" alt="Perfil 1">
                     <div class="texto-blog">
                         <h4>Consejos para Comprar tu Primera Casa</h4>
                         <p>comprar Tu Primera: <span>Casa</span></p>
@@ -31,7 +31,7 @@ include './includes/templades/Navegacion.php';
 
                 <!-- Blog 3 -->
                 <article class="Entrada-blog">
-                    <img src="src/Image/Blog No.3.jpeg" alt="Perfil 1">
+                    <img src="src/Image/Blog No.3.webp" alt="Perfil 1">
                     <div class="texto-blog">
                         <h4>Cómo Preparar tu Casa para una Venta Rápida</h4>
                         <p>venta <span>rapidad</span></p>
@@ -41,7 +41,7 @@ include './includes/templades/Navegacion.php';
 
                 <!-- Blog 4 -->
                 <article class="Entrada-blog">
-                    <img src="src/Image/Blog No.4.jpeg" alt="Perfil 1">
+                    <img src="src/Image/Blog No.4.webp" alt="Perfil 1">
                     <div class="texto-blog">
                         <h4>Análisis del Mercado Inmobiliario 2024</h4>
                         <p>Mercado Inmobilario en: <span>2024</span></p>
@@ -51,7 +51,7 @@ include './includes/templades/Navegacion.php';
 
                 <!-- Blog 5 -->
                 <article class="Entrada-blog">
-                    <img src="src/Image/Blog No.5.jpeg" alt="Perfil 1">
+                    <img src="src/Image/Blog No.5.webp" alt="Perfil 1">
                     <div class="texto-blog">
                         <h4>Consejos de Mantenimiento para tu Propiedad</h4>
                         <p>consejos de: <span>Mantenimiento</span></p>
@@ -62,14 +62,10 @@ include './includes/templades/Navegacion.php';
             </section>
         </div>
 
-
         <!--footer.scss-->
         <script src="/build/js/bundle.min.js"></script>
         <?php
         include './includes/templades/footer.php';
         ?>
-
-
         </body>
-
         </html>

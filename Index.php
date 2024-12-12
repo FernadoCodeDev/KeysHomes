@@ -16,7 +16,7 @@ include './includes/templades/header.php';
             </div>
         </div>
         <div class="work-data">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium assumenda, ipsa aliquam nisi odio veritatis dolor enim, quasi at doloribus exercitationem, quae repudiandae! Asperiores rem at illo, totam laboriosam praesentium.</p>
+            <p>Conectando sueños con hogares. En KeysHomes trabajamos para que cada cliente encuentre no solo una casa, sino un lugar donde construir recuerdos y vivir plenamente. Nuestra misión es facilitar este proceso con transparencia y dedicación.</p>
         </div>
     </div>
 </main>
@@ -45,7 +45,7 @@ include './includes/templades/header.php';
         <a href="Propiedades.php" class="boton-tomato-inline-block">ver Propiedades</a>
 
     </div>
-    <img src="src/Image/Home 15.jpg" alt="Fondo Secundario">
+    <img src="src/Image/Home 15.webp" alt="Fondo Secundario">
 
 </section>
 
@@ -56,7 +56,7 @@ include './includes/templades/header.php';
 
         <ARTicle class="Entrada-arte">
             <div class="imagen">
-                <img src="src/Image/Home 1.png" alt="arte 1">
+                <img src="src/Image/Home 1.webp" alt="arte 1">
             </div>
 
             <div class="texto-entrada">
@@ -69,7 +69,7 @@ include './includes/templades/header.php';
         <ARTicle class="Entrada-arte">
             <div class="imagen">
 
-                <img src="src/Image/Home 2.png" alt="arte 2">
+                <img src="src/Image/Home 2.webp" alt="arte 2">
             </div>
 
             <div class="texto-entrada">
@@ -84,7 +84,7 @@ include './includes/templades/header.php';
         <h3>testimoniales</h3>
         <div class="testimonial">
             <blockquote class="ImgAndTextTestimonial">
-                <img src="src/Image/Comillas.png" alt="Comillas" class="comillas">
+                <img src="src/Image/Comillas.webp" alt="Comillas" class="comillas">
                 <p class="Text-testimonial">Gracias a Key Homes, encontré la casa de mis sueños en el vecindario perfecto. Su equipo me guió en cada paso del proceso, desde la búsqueda hasta la compra. La atención personalizada y el conocimiento del mercado me hicieron sentir respaldado y seguro. ¡Ahora disfruto de mi nuevo hogar, y no podría estar más feliz!</p>
             </blockquote>
             <p class="Autor-testimonial">Camila Díaz</p>

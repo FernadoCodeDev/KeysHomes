@@ -1,3 +1,10 @@
+@include tablet{
+    .contenedor-anuncios {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @include laptop{
     .contenedor-anuncios {
         display: grid;

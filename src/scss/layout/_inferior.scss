@@ -15,7 +15,7 @@
 .Entrada-arte {
   margin-bottom: 2rem;
   display: block;
-  @include laptop {
+  @include tablet {
     display: grid;
     grid-template-columns: 1fr 2fr;
     column-gap: 2rem;

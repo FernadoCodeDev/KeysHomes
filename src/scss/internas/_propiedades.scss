@@ -5,13 +5,16 @@
 }
 
 .contenedor-propiedades-row {
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   @include laptop {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
-
 
 .propiedades {
   background-color: $gris;

@@ -12,7 +12,7 @@ $auth = $_SESSION['login'] ?? null;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="src/Image/Keys Homes Logo Web.png" type="image/png">
+    <link rel="icon" href="src/Image/Keys Homes Logo Web.webp" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="build/css/app.css">
     <title>Keys Homes</title>
@@ -24,16 +24,16 @@ $auth = $_SESSION['login'] ?? null;
     <header class="header">
         <div class="contenido-header">
             <a href="../../Index.php">
-                <img src="src/Image/Keys Homes Logo.png" class="Keys-Homes-Logo" alt="Keys Homes Logo">
+                <img src="src/Image/Keys Homes Logo.webp" class="Keys-Homes-Logo" alt="Keys Homes Logo">
             </a>
 
             <div class="mobile-menu">
-                <img src="src/Image/mobile menu.png" alt="Mobile Menu">
+                <img src="src/Image/mobile menu.webp" alt="Mobile Menu">
             </div>
 
             <!-- DARK MODE -->
             <div class="dark-mode-icon">
-                <img src="src/Image/Iconos/Luna Icono.png" class="DarkMode" alt="Dark Mode">
+                <img src="src/Image/Luna Icono.webp" class="DarkMode" alt="Dark Mode">
             </div>
 
             <nav class="navegacion">
@@ -51,17 +51,17 @@ $auth = $_SESSION['login'] ?? null;
                     <h1>Nosotros tomamos el control de su sueño, su hogar & <span class="transparent-text">todo es muy fácil</span></h1>
                     <p>Nuestros agentes tienen un amplio conocimiento del mercado inmobiliario local y le brindaremos información valiosa sobre los vecindarios, casas y otros factores importantes que podrían afectar su decisión</p>
                     <div class="botones-info">
-                        <button class="Ver-Propiedades">
-                            <a href="../../Propiedades.php">Ver propiedades</a>
-                        </button>
-                        <button class="Leer-más">
-                            <a href="#Data-KeysHomes">Leer más</a>
-                        </button>
+                        <a href="../../Propiedades.php" >
+                            <button class="Ver-Propiedades">Ver propiedades</button>
+                        </a>
+                        <a href="#Data-KeysHomes">
+                            <button class="Leer-más">Leer más</button>
+                        </a>
                     </div>
                 </div>
-                <img src="src/Image/Edificio.png" class="Edificio" alt="Edificio">
+                <img src="src/Image/Edificio.webp" class="Edificio" alt="Edificio">
             </div>
         </div>
-        <img src="src/Image/Background Green.png" alt="Fondo principal" class="fondo-principal">
+        <img src="src/Image/Background Green.webp" alt="Fondo principal" class="fondo-principal">
 
     </header>
