@@ -101,7 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
       <div class="Img-propiedad">
           <legend>Sube una imagen de la propiedad</legend>
-          <img src="../../src/Image/Sube Tu Imagen.png" id="imagenpreview" class="imagenpreview" name="imagenpreview" alt="Image">
+          <img src="../../src/Image/Sube Tu Imagen.webp" id="imagenpreview" class="imagenpreview" name="imagenpreview" alt="Image">
           <div class="file-upload">
               <label for="imagen" class="custom-file-upload">Sube tu imagen</label>
               <input id="imagen" name="imagen" type="file" accept="image/*" required/>
