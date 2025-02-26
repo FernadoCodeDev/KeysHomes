@@ -1,0 +1,56 @@
+@include tablet {
+  .ContainerAds {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include laptop {
+  .ContainerAds {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.Advertisement {
+  background-color: $grey;
+  border: none;
+  margin: 1rem;
+
+  img {
+    width: 100%;
+    height: 20rem;
+    @include tablet {
+      height: 30rem;
+    }
+  }
+  .ContentAdvertisement {
+    padding: 2rem;
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: $Fuente_Principal;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
+
+    @include laptop {
+      font-size: 2.5rem;
+    }
+  }
+  p {
+    margin: 1rem;
+    line-height: 1.5;
+
+    @include laptop {
+      font-size: 1.5rem;
+    }
+  }
+  .price {
+    color: $GreenPine;
+    font-weight: bold;
+    font-size: 3rem;
+  }
+}

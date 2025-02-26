@@ -1,0 +1,42 @@
+.button-tomato-block {
+  @include button($Tomato, block);
+}
+
+.button-tomato-block {
+  @include button($Tomato, block);
+}
+.button-tomato-inline-block {
+  @include button($Tomato, inline-block);
+}
+
+.button-SeaGreen-block {
+  @include button($SeaGreen, block);
+}
+
+.button-SeaGreen-inline-block {
+  @include button($SeaGreen, inline-block);
+}
+
+.button-dodgerBlue-block {
+  @include button($dodgerBlue, block);
+}
+
+.button-deepRed-block {
+  @include button($deepRed, block);
+}
+
+.button-black-inline-block {
+  @include button($DarkGrey, inline-block);
+}
+
+.button-GreenPine-block {
+  @include button($GreenPine, block);
+}
+
+.button-GreenPine-inline-block {
+  @include button($GreenPine, inline-block);
+}
+
+//$GreenPine
+
+

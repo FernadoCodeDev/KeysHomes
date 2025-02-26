@@ -1,0 +1,130 @@
+.headerNavigation {
+  background-color: $GreenPine;
+  width: 100%;
+  height: auto;
+
+  .KeysHomesLogo {
+    width: 15rem;
+    height: auto;
+    margin: 0rem;
+    cursor: pointer;
+
+    @include tablet {
+      width: 15rem;
+    }
+
+    @include desktop {
+      width: 25rem;
+    }
+  }
+
+  .mobileMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+
+    @include tablet {
+      display: none;
+    }
+
+    img {
+      width: 5rem;
+      height: auto;
+    }
+  }
+
+  .navigation {
+    top: 16rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 1s ease, opacity 1s ease;
+    z-index: 1000;
+
+    a {
+      display: block;
+      font-size: 1rem;
+      color: $White;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 0.1rem;
+      justify-content: center;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+
+      &:hover {
+        transition: 1s ease;
+        color: $Golden;
+      }
+
+      @include tablet {
+        justify-content: center;
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        &:hover {
+          transition: 1s ease;
+          color: $Golden;
+        }
+      }
+
+      @include laptop {
+        font-size: 2rem;
+      }
+
+      @include desktop {
+        font-size: 2.5rem;
+      }
+    }
+
+    &.ShowNavigation {
+      max-height: 15rem;
+      opacity: 1;
+    }
+
+    @include tablet {
+      max-height: none;
+      opacity: 1;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    @include desktop {
+      max-height: none;
+      opacity: 1;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
+
+  .LunaIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    .DarkMode {
+      width: 5rem;
+      height: auto;
+      margin: -12rem 0.5rem 0 0;
+      cursor: pointer;
+
+      @include tablet {
+        margin: -7rem 0.5rem 0 0;
+        width: 6rem;
+      }
+
+      @include desktop {
+        margin: -12rem 0.5rem 0 0;
+        width: 8rem;
+      }
+    }
+  }
+}

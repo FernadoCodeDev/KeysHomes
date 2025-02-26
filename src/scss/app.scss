@@ -1,0 +1,29 @@
+//base
+@import "base/normalize";
+@import "base/variables";
+@import "base/mixins";
+@import "base/darkMode";
+@import "base/Buttons";
+
+//Admin
+@import "Admin/Alert";
+@import "Admin/CreateAndUpdate";
+
+
+//internal
+@import "internal/Blog"; 
+@import "internal/Properties"; 
+@import "internal/AboutKeysHomes"; 
+@import "internal/UniqueAdvertisement"; 
+@import "internal/Login"; 
+
+
+//layout
+@import "layout/header"; 
+@import "layout/Data-KeysHomes"; 
+@import "layout/Advertisements"; 
+@import "layout/SecondaryFund"; 
+@import "layout/lower"; 
+@import "layout/Navigation"; 
+@import "layout/footer"; 
+@import "layout/contact"; 

@@ -1,0 +1,81 @@
+.footer {
+  background-color: $GreenPine;
+  padding: 2rem 0;
+
+  .ContenedorFooter {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    nav {
+      display: flex;
+      flex-direction: column;
+
+      @include laptop {
+        flex-direction: row;
+      }
+      a {
+        font-size: 1.5rem;
+        color: $White;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 0.5rem;
+
+        &:hover {
+          transition: 1s ease;
+          color: $Golden;
+        }
+      }
+    }
+
+    .SocialIcons {
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      margin-left: auto;
+
+      @include laptop {
+        flex-direction: row;
+      }
+
+      .SocialIcon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        margin: 0.5rem;
+        padding: 0.5rem;
+        background: $White;
+        border-radius: 50%;
+        transition: 1s ease;
+        svg {
+          fill: currentColor;
+        }
+      }
+    }
+
+    .Instagram, .Facebook, .X {
+      color: $DarkGrey;
+      transition: 1s ease;
+    }
+    .Instagram:hover {
+      background: linear-gradient(
+        45deg,
+        #fcaf45,
+        #f77737,
+        #c13584,
+        #833ab4,
+        #405de6
+      );
+      color: $White;
+    }
+
+    .Facebook:hover {
+      color: #0966ff;
+    }
+ 
+    .X:hover {
+        color: $Black;
+      }
+  }
+}

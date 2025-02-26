@@ -1,0 +1,9 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+# Redirigir "Index.php" a la raíz del sitio
+RewriteRule ^(Index|index)\.php$ / [NC,R=301,L]
+
+# Ocultar la extensión .php de todas las páginas
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]

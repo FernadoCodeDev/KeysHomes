@@ -1,0 +1,116 @@
+.ContactMain {
+  max-width: 60rem;
+  background: $White;
+  margin: 1rem auto;
+  padding: 1rem;
+  box-shadow: 0px 0.5rem 0.5rem $grey;
+  border-radius: 2vh;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  font-family: $Fuente_Principal;
+}
+
+fieldset {
+  border: 1px solid $grey;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+legend {
+  font-weight: bold;
+  color: $DarkGrey;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.5rem 0rem 0.5rem 0.5rem;
+  border: 1px solid $grey;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.propertyImages {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: $grey;
+  padding: 1rem;
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .propertyItem {
+    text-align: center;
+    padding: 0.5rem;
+    transition: 1s;
+    cursor: pointer;
+    img {
+      width: 100%;
+      height: auto;
+      @include tablet {
+        width: 100%;
+        height: 10rem;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.SelectedProperty {
+  background-color: $GreenPine;
+  color: $White;
+}
+
+.ContactMethod {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .InputContacts {
+    width: 100%;
+  }
+}
+
+.greenbutton {
+  background-color: $GreenPine;
+  color: $Golden;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.greenbutton:hover {
+  background-color: darken($GreenPine, 5%);
+}
+
+

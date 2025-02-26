@@ -1,0 +1,62 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.DataKeysHomes {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-content: center;
+
+  @include tablet{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .propertyData {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-content: center;
+    color: $White;
+    background: linear-gradient(to right, #848265, #3b3b2e);
+    padding: 2rem;
+
+    @include tablet{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .Results {
+      font-size: 4rem;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      color: $White;
+      margin: 0;
+      span {
+        color: #98c5b8;
+      }
+    }
+   
+    .TextResults {
+      text-align: center;
+      color: $White;
+      font-family: $Fuente_Principal;
+      font-size: 1.5rem;
+      margin: 0;
+    }
+  }
+
+  .TextDataKeysHomes {
+    text-align: center;
+    color: $White;
+    background: $Black;
+    font-family: $Fuente_Principal;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 2rem;
+
+    @include tablet{
+      grid-column: 2 span;
+    }
+  }
+
+  
+}

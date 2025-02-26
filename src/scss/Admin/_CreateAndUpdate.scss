@@ -1,0 +1,125 @@
+.CreateAndUpdateForm {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: center;
+  margin: 2rem auto;  
+  padding: 1rem;
+  background-color: $DarkGrey;
+  box-shadow: 0.5rem 0.5rem $grey;
+  border-radius: 1vh;
+  width: 100%;
+  max-width: 60rem;
+  box-sizing: border-box;
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 1.5rem; 
+    box-sizing: border-box;
+
+    @include tablet{
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem; 
+    }
+
+    .UploadImage {
+      text-align: center;
+      color: $White;
+      
+      .ImagenPreview {
+        width: 100%;
+        height: 25rem;
+        object-fit: contain;
+        margin: 1rem 0;
+      }
+
+      .FileUpload {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 1rem;
+        
+        input[type="file"] {
+          opacity: 0;
+          position: absolute;
+          width: 100%;
+          height: auto;
+          cursor: pointer;
+        }
+
+        .CustomFileUpload {
+          padding: 1rem;
+          text-align: center;
+          background-color: $Tomato;
+          color: white;
+          border-radius: 2vh;
+          transition: background-color 0.5s;
+          width: 100%;
+          cursor: pointer;
+        }
+
+        .CustomFileUpload:hover {
+          background-color: darken($Tomato, 10%);
+        }
+      }
+    }
+
+    .FormFields,
+    .QuoteFormFields {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      label {
+        font-size: 1.5rem;
+        color: $White;
+        font-weight: bold;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.5rem;
+        border: none;
+        outline: none;
+        border-radius: 2vh;
+        box-sizing: border-box;
+        background-color: $grey;
+        color: $Black;
+      }
+
+      textarea {
+        resize: none;
+        height: 6rem;
+
+        @include laptop {
+          height: 12rem;
+        }
+
+        @include desktop {
+          height: 16rem;
+        }
+      }
+    }
+
+    button {
+      width: 100%;
+      color: $White;
+      background-color: $SeaGreen;
+      border: none;
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding: 1rem;
+      cursor: pointer;
+      transition: border-radius 0.5s, background-color 0.5s;
+      margin-top: 1rem;
+
+      &:hover {
+        border-radius: 2vh;
+        background-color: darken($SeaGreen, 10%);
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+.AllAds {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include laptop {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.Advertisement {
+  background-color: $grey;
+  border: none;
+  margin: 0 1rem 1.5rem 1rem;
+  margin-bottom: 1.5rem; 
+  break-inside: avoid; 
+}
+
+img {
+  width: 100%;
+  height: 25rem;
+}
+
+.InfoAdvertisement {
+  margin: 1rem ;
+  h3 {
+      text-align: center;
+      font-size: 1.5rem;
+      font-family: $Fuente_Principal;
+      font-weight: bold;
+      margin: 0;
+
+      @include laptop {
+      font-size: 2.5rem;
+      }
+  }
+  p {
+      margin: 1rem;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.2rem;
+  }
+  .price {
+      color: $GreenPine;
+      font-weight: bold;
+      font-size: 3rem;
+  }
+}
+
+//Edit and Delete Buttons in the Admin Panel Admin.php
+.AdministrationButtons {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-content: center;
+  
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  a,
+  input[type="submit"] {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-content: center;
+    text-align: center;
+    width: 100%;
+    color: $White;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    box-sizing: border-box; // Evita que el border agrande el botón
+  }
+
+  .UpdateButton {
+    background-color: $dodgerBlue;
+    border: #1365b6 solid 0.5rem;
+    transition: background-color 1s, border-color 1s;
+
+    &:hover {
+      background-color: darken($dodgerBlue, 15%);
+      border-color: #0c4175;
+    }
+  }
+
+  .DeleteButton {
+    background-color: $deepRed;
+    border: #c90000 solid 0.5rem;
+    transition: background-color 1s, border-color 1s;
+
+    &:hover {
+      background-color: darken($deepRed, 15%);
+      border-color: darken(#c90000, 15%);
+    }
+  }
+}

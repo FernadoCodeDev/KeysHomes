@@ -1,0 +1,59 @@
+.ContainerAdvertisement {
+  .Advertisement {
+    display: grid;
+    background-color: $grey;
+    margin: 1rem;
+    max-width: 60rem;
+    border: none;
+    margin: 0;
+
+    @include tablet {
+      margin: 1rem auto;
+    }
+    img {
+      width: 100%;
+      max-height: 30rem;
+    }
+
+    .AnnouncementInfo {
+      padding: 0 1rem;
+      h3 {
+        margin: 1rem;
+        font-family: $Fuente_Principal;
+        font-weight: bold;
+        font-size: 2rem;
+        @include laptop {
+          font-size: 3rem;
+        }
+      }
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 1rem;
+      }
+      .price {
+        text-align: left;
+        color: $SeaGreen;
+        font-weight: bold;
+        font-size: 2rem;
+        margin: 0;
+      }
+    }
+
+    .PropertyContact {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 1rem;
+
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+        span {
+          color: $GreenPine;
+          font-family: $Fuente_Principal;
+          font-size: 1.2rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

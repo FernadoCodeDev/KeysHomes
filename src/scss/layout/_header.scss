@@ -1,0 +1,292 @@
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2, 
+h3 {
+  text-align: center;
+  color: $Charcoal;
+  font-family: $Fuente_Principal;
+  font-weight: bold;
+  font-size: 1.5rem;
+  @include laptop {
+    font-size: 3rem;
+  }
+}
+
+//Class to keep the footer at the bottom
+.AllContent {
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto, 1fr auto;
+}
+
+
+.header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  position: relative;
+  @include laptop {
+    height: 100vh;
+  }
+
+  .contentHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .KeysHomesLogo {
+      width: 15rem;
+      height: auto;
+      margin: 0rem;
+      cursor: pointer;
+
+      @include tablet {
+        width: 15rem;
+      }
+
+      @include desktop {
+        width: 25rem;
+      }
+    }
+
+    .mobileMenu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1.5rem;
+      cursor: pointer;
+
+      @include tablet {
+        display: none;
+      }
+
+      img {
+        width: 5rem;
+        height: auto;
+      }
+    }
+
+    .navigation {
+      top: 16rem;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 1s ease, opacity 1s ease;
+      z-index: 1000;
+
+      a {
+        display: block;
+        font-size: 1rem;
+        color: $White;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 0.1rem;
+        justify-content: center;
+        margin-top: 0.5rem;
+
+        &:hover {
+          transition: 1s ease;
+          color: $Golden;
+        }
+
+        @include tablet {
+          justify-content: center;
+          font-size: 1.5rem;
+          padding: 0.5rem;
+          &:hover {
+            transition: 1s ease;
+            color: $Golden;
+            border-radius: 2vh;
+          }
+        }
+
+        @include laptop {
+          font-size: 2rem;
+        }
+
+        @include desktop {
+          font-size: 2.5rem;
+        }
+      }
+
+      &.ShowNavigation {
+        max-height: 15rem;
+        opacity: 1;
+      }
+
+      @include tablet {
+        max-height: none;
+        opacity: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      @include desktop {
+        max-height: none;
+        opacity: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+      }
+    }
+  }
+
+  .generalInformationKeysHomes {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include laptop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .informationKeysHomes {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h3 {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+        margin-top: -0.2rem;
+        font-family: $Fuente_Principal;
+        color: $Golden;
+
+        @include tablet {
+          font-size: 2rem;
+        }
+        @include desktop {
+          font-size: 3rem;
+        }
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 2.4rem;
+        font-family: $Fuente_Principal;
+        color: $White;
+        margin: -2.5rem 0 0 1rem;
+        line-height: 1;
+
+        .transparentText {
+          opacity: 0.5;
+          color: $greenAqua;
+        }
+
+        @include tablet {
+          font-size: 2.5rem;
+        }
+
+        @include desktop {
+          margin-top: -3.5rem;
+          font-size: 4.9rem;
+        }
+      }
+
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        text-align: center;
+        color: $White;
+        padding: 1rem;
+        margin: 1rem;
+
+        @include tablet {
+          font-size: 2rem;
+        }
+
+        @include desktop {
+          margin-top: 0.5rem;
+          font-size: 2.5rem;
+        }
+      }
+    }
+
+    .InfoButtons {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include tablet {
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+
+      a {
+        @include tablet {
+          margin-right: 1rem;
+        }
+        .ViewProperties {
+          font-family: $Fuente_Principal;
+          font-size: 1rem;
+          background-color: $greenAqua;
+          border-radius: 3vh;
+          border-style: none;
+          margin-bottom: 1rem;
+          padding: 1rem;
+          width: 100%;
+          transition: 1s ease;
+          cursor: pointer;
+          &:hover {
+            background-color: #506b62;
+            color: $White;
+          }
+        }
+      }
+
+      a {
+        .ReadMore {
+          font-family: $Fuente_Principal;
+          font-size: 1rem;
+          background-color: transparent;
+          border: $White solid 0.2rem;
+          color: $White;
+          border-radius: 3vh;
+          padding: 1rem;
+          width: 100%;
+          cursor: pointer;
+          transition: 1s ease;
+          &:hover {
+            background-color: $White;
+            color: $Black;
+          }
+        }
+      }
+    }
+
+    .Building {
+      width: 30%;
+      height: auto;
+      margin: 1rem 0 0 0;
+      bottom: 0;
+
+      @include laptop {
+        width: 30%;
+        height: auto;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+      }
+    }
+  }
+
+  .MainBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+}

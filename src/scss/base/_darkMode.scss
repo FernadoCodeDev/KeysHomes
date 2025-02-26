@@ -1,0 +1,221 @@
+// Icon Moon
+.darkModeIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: end;
+    margin-top: -1rem;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    justify-content: end;
+    margin-top: -4rem;
+  }
+
+  .DarkMode {
+    width: 5rem;
+    height: auto;
+    margin: -12rem 0.5rem 0 0;
+    cursor: pointer;
+
+    @include tablet {
+      width: 6rem;
+    }
+
+    @include desktop {
+      width: 8rem;
+    }
+  }
+}
+
+//DarkMode Function
+
+.DarkModeFunction {
+  //Global
+  background-color: $Charcoal;
+
+  h1,
+  h2,
+  h3 {
+    text-align: center;
+    color: $grey;
+    font-family: $Fuente_Principal;
+    font-weight: bold;
+    font-size: 2rem;
+    @include laptop {
+      font-size: 3rem;
+    }
+  }
+
+  //Advertisements.Scss
+  .Advertisement {
+    background-color: $DarkGrey;
+
+    h3 {
+      color: $White;
+    }
+    p {
+      color: $White;
+    }
+    .price {
+      color: $Golden;
+    }
+  }
+
+  //lower.scss
+
+  .TextLowerSection {
+    text-align: center;
+    font-family: $Fuente_Principal;
+    font-size: 2.5rem;
+  }
+
+  .Promotion {
+    @include tablet {
+      background-color: $DarkGrey;
+    }
+  }
+
+  .TextPromotion {
+    h4 {
+      color: $White;
+      &::after {
+        background-color: $Golden;
+      }
+    }
+    p {
+      color: $White;
+    }
+    span {
+      color: $Golden;
+    }
+  }
+
+  .TestimonialInfo {
+    h3 {
+      color: $White;
+    }
+  }
+  .testimonial {
+    background-color: $GreenPine;
+    blockquote {
+      .QuotationMarks {
+        filter: invert(0%);
+      }
+
+      p {
+        color: $White;
+      }
+    }
+
+    .Review {
+      color: $White;
+    }
+  }
+
+  .contactContainer {
+    .contactMessage {
+      color: $White;
+    }
+  }
+
+  //SingleAnnouncement.scss
+  .ContainerAdvertisement {
+    .Advertisement {
+      background-color: $DarkGrey;
+
+      .AnnouncementInfo {
+        h3 {
+          color: $White;
+        }
+        p {
+          color: $White;
+        }
+        .price {
+          color: $Golden;
+        }
+      }
+
+      .PropertyContact {
+        p {
+          color: $White;
+          span {
+            color: $Golden;
+          }
+        }
+      }
+    }
+  }
+
+  //Contatc.scss
+
+  .ContactMain {
+    background: $DarkGrey;
+    box-shadow: 0px 0.5rem 0.5rem $grey;
+  }
+
+  form {
+    color: $White;
+  }
+
+  legend {
+    color: $grey;
+  }
+
+  label {
+    color: $grey;
+  }
+
+  input,
+  textarea {
+    background-color: transparent;
+    color: $White;
+  }
+
+  select,
+  option {
+    background-color: $Charcoal;
+    color: $grey;
+  }
+
+  .propertyImages {
+    background-color: transparent;
+  }
+
+  .greenbutton {
+    background-color: $GreenPine;
+    color: $Golden;
+  }
+
+  .greenbutton:hover {
+    background-color: darken($GreenPine, 5%);
+  }
+
+  //Blog.scss
+  .SectionBlog {
+    .BlogInfo {
+      h4 {
+        color: $White;
+        &::after {
+          background-color: $Golden;
+        }
+      }
+
+      p {
+        color: $White;
+        span {
+          color: $Golden;
+        }
+      }
+    }
+  }
+
+  //AboutKeysHomes.scss
+  .Detail {
+    color: $White;
+  }
+}

@@ -1,0 +1,17 @@
+.ErrorAlert {
+  text-align: center;
+  background-color: $Tomato;
+  color: $White;
+  font-weight: bold;
+  font-family: $Fuente_Principal;
+  padding: 1rem;
+}
+
+.SuccessAlert {
+  text-align: center;
+  background-color: $SeaGreen;
+  color: $White;
+  font-weight: bold;
+  font-family: $Fuente_Principal;
+  padding: 1rem;
+}

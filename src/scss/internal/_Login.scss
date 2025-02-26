@@ -1,0 +1,91 @@
+.Login {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  background-color: $grey;
+  padding: 2rem;
+  border-radius: 2vh;
+  box-shadow: 0.5rem 0.5rem $DarkGrey;
+  width: 100%;
+  max-width: 60rem;
+  margin: 1rem auto;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+
+  @include tablet {
+    max-width: 60rem;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      .sugerencia {
+        grid-column: span 2;
+      }
+    }
+
+    .user-box {
+      position: relative;
+    }
+
+    .user-box input,
+    .user-box textarea {
+      width: 100%;
+      padding: 10px 0;
+      font-size: 1rem;
+      color: $GreenPine;
+      border: none;
+      border-bottom: 1px solid $Black;
+      outline: none;
+      background: transparent;
+    }
+
+    .user-box label {
+      position: absolute;
+      top: 1rem;
+      left: 0;
+      padding: 0;
+      font-size: 1rem;
+      color: $DarkGrey;
+      pointer-events: none;
+      transition: 1s;
+    }
+
+    .user-box input:focus ~ label,
+    .user-box input:not(:placeholder-shown) ~ label,
+    .user-box textarea:focus ~ label,
+    .user-box textarea:not(:placeholder-shown) ~ label {
+      top: -1rem;
+      left: 0;
+      color: $Charcoal;
+      font-size: 1.2rem;
+    }
+
+    .Send {
+      width: 100%;
+      background-color: $Tomato;
+      color: $White;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 1rem;
+      border: none;
+      border-radius: 2vh;
+      margin: 0 auto;
+      transition: 1s;
+
+      &:hover {
+        background-color: darken($Tomato, 15%);
+        cursor: pointer;
+      }
+
+      @include tablet {
+        font-size: 1.5rem;
+        grid-column: span 2;
+      }
+    }
+  }
+}

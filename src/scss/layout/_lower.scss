@@ -1,0 +1,131 @@
+@include laptop {
+  .LowerSection{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 2rem;
+  }
+}
+
+.TextLowerSection {
+  text-align: center;
+  font-family: $Fuente_Principal;
+  font-size: 2.5rem;
+}
+
+.Promotion {
+  margin-bottom: 2rem;
+  display: block;
+  
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
+    background-color: $grey;
+    border-radius: 1vh;
+  }
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .imagenPromotion {
+    margin: 1rem;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.TextPromotion {
+  margin: 1rem;
+  h4 {
+    font-size: 2rem;
+    font-family: $Fuente_Principal;
+    margin: 0;
+    line-height: 1.4;
+    &::after {
+      content: "";
+      display: block;
+      width: 15rem;
+      height: 0.5rem;
+      background-color: $GreenPine;
+      margin-top: 1rem;
+    }
+  }
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+  }
+  span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: $GreenPine;
+    margin-left: 1rem;
+  }
+}
+
+.TestimonialInfo {
+  h3 {
+    text-align: center;
+    font-family: $Fuente_Principal;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $Black;
+  }
+}
+.testimonial {
+  background-color: $Golden;
+  font-size: 1rem;
+  padding: 2rem;
+  border-radius: 2vh;
+  margin: 1rem;
+
+  @include tablet {
+    font-size: 1rem;
+    position: relative;
+  }
+  blockquote {
+    .QuotationMarks {
+      content: "";
+      background-repeat: no-repeat;
+      display: block;
+      width: 4rem;
+      height: 4rem;
+      filter: invert(100%);
+      position: absolute;
+      margin: -2rem 0 0 -3rem;
+      padding: 0;
+    }
+
+    p {
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      font-size: 1.5rem;
+      color: $Black;
+      grid-column: 2 span;
+    }
+  }
+  
+  .Review {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: right;
+    color: $Black;
+  }
+}
+
+.contactContainer {
+  display: grid;
+  align-content: center;
+  grid-column: 2 span;
+
+  .contactMessage {
+    font-family: Arial, Helvetica, sans-serif;
+    color: $Black;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    margin: 1rem;
+  }
+}
