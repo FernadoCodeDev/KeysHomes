@@ -52,17 +52,19 @@
   }
 
   //Advertisements.Scss
-  .Advertisement {
-    background-color: $DarkGrey;
+  .section-max-width {
+    .Advertisement {
+      background-color: $DarkGrey;
 
-    h3 {
-      color: $White;
-    }
-    p {
-      color: $White;
-    }
-    .price {
-      color: $Golden;
+      h3 {
+        color: $White;
+      }
+      p {
+        color: $White;
+      }
+      .price {
+        color: $Golden;
+      }
     }
   }
 

@@ -22,7 +22,7 @@ include './includes/templades/header.php';
 </main>
 
 <!--Advertisements.Scss-->
-<section>
+<section class="section-max-width">
     <h2>Nuestras Propiedades</h2>
 
     <?php

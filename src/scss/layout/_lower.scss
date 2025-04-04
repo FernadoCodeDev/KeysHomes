@@ -3,6 +3,8 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     column-gap: 2rem;
+    margin: auto;
+    max-width: 90rem;
   }
 }
 

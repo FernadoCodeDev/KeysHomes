@@ -1,18 +1,16 @@
 .ContainerAdvertisement {
+  padding: 1rem;
   .Advertisement {
     display: grid;
     background-color: $grey;
-    margin: 1rem;
+    margin: auto;
     max-width: 60rem;
     border: none;
-    margin: 0;
+    padding: 1rem;
 
-    @include tablet {
-      margin: 1rem auto;
-    }
     img {
       width: 100%;
-      max-height: 30rem;
+      height: auto;
     }
 
     .AnnouncementInfo {

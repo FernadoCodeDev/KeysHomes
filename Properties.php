@@ -2,9 +2,12 @@
 include './includes/templades/Navigation.php';
 ?>
 
+<section class="section-max-width">
+
 <?php
 include './includes/templades/Properties.php';
 ?>
+</section>
 
 <!--footer.scss-->
 <?php
