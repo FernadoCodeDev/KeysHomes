@@ -45,10 +45,6 @@
     color: $grey;
     font-family: $Fuente_Principal;
     font-weight: bold;
-    font-size: 2rem;
-    @include laptop {
-      font-size: 3rem;
-    }
   }
 
   //Advertisements.Scss
@@ -69,12 +65,6 @@
   }
 
   //lower.scss
-
-  .TextLowerSection {
-    text-align: center;
-    font-family: $Fuente_Principal;
-    font-size: 2.5rem;
-  }
 
   .Promotion {
     @include tablet {
