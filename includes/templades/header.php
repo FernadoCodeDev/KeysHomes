@@ -49,7 +49,7 @@ $auth = $_SESSION['login'] ?? null;
 
                 <div class="generalInformationKeysHomes">
                     <div class="informationKeysHomes">
-                        <h3>--Welcome Keys Homes</h3>
+                        <h3>--Bienvenido a Keys Homes</h3>
                         <h1>Nosotros tomamos el control de su sueño, su hogar & <span class="transparentText">todo es muy fácil</span></h1>
                         <p>Nuestros agentes tienen un amplio conocimiento del mercado inmobiliario local y le brindaremos información valiosa sobre los vecindarios, casas y otros factores importantes que podrían afectar su decisión</p>
                         <div class="InfoButtons">

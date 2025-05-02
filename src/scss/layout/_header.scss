@@ -3,7 +3,7 @@ html {
 }
 
 h1,
-h2, 
+h2,
 h3 {
   text-align: center;
   color: $Charcoal;
@@ -18,51 +18,51 @@ h3 {
 //Class to keep the footer at the bottom
 .AllContent {
   display: grid;
-  min-height: 100dvh;
+  min-height: 100vh;
   grid-template-rows: auto, 1fr auto;
 }
-
 
 .header {
   display: flex;
   flex-direction: column;
   position: relative;
   width: 100%;
-  height: auto;
+  min-height: 100vh;
   position: relative;
-  @include laptop {
-    height: 100vh;
-  }
 
   .contentHeader {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-content: center;
+    margin: auto;
+
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     .KeysHomesLogo {
-      width: 15rem;
+      width: 100%;
+      max-width: 20rem;
+      padding: 1rem;
       height: auto;
       margin: 0rem;
       cursor: pointer;
-
-      @include tablet {
-        width: 15rem;
-      }
-
-      @include desktop {
-        width: 25rem;
-      }
     }
 
     .mobileMenu {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       margin-top: 1.5rem;
       cursor: pointer;
+      order: 3;
+      grid-column: span 2;
 
       @include tablet {
         display: none;
+        order: 2;
+        grid-column: span 1;
       }
 
       img {
@@ -72,8 +72,6 @@ h3 {
     }
 
     .navigation {
-      top: 16rem;
-      left: 0;
       width: 100%;
       text-align: center;
       max-height: 0;
@@ -81,6 +79,8 @@ h3 {
       opacity: 0;
       transition: max-height 1s ease, opacity 1s ease;
       z-index: 1000;
+      grid-column: span 2;
+      order: 3;
 
       a {
         display: block;
@@ -102,19 +102,12 @@ h3 {
           justify-content: center;
           font-size: 1.5rem;
           padding: 0.5rem;
+
           &:hover {
             transition: 1s ease;
             color: $Golden;
             border-radius: 2vh;
           }
-        }
-
-        @include laptop {
-          font-size: 2rem;
-        }
-
-        @include desktop {
-          font-size: 2.5rem;
         }
       }
 
@@ -129,22 +122,21 @@ h3 {
         display: flex;
         flex-direction: row;
         justify-content: center;
-      }
-
-      @include desktop {
-        max-height: none;
-        opacity: 1;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: center;
+        order: 2;
+        grid-column: span 1;
+        margin: auto;
       }
     }
   }
 
   .generalInformationKeysHomes {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-column: span 2;
+    order: 4;
+
+    @include laptop {
+      grid-column: span 3;
+    }
 
     @include laptop {
       grid-template-columns: repeat(2, 1fr);
@@ -157,17 +149,13 @@ h3 {
 
       h3 {
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 1rem;
         padding: 1rem;
-        margin-top: -0.2rem;
         font-family: $Fuente_Principal;
         color: $Golden;
 
         @include tablet {
-          font-size: 2rem;
-        }
-        @include desktop {
-          font-size: 3rem;
+          font-size: 1.5rem;
         }
       }
 
@@ -272,7 +260,7 @@ h3 {
       bottom: 0;
 
       @include laptop {
-        width: 30%;
+        width: 25%;
         height: auto;
         bottom: 0;
         right: 0;
@@ -286,7 +274,7 @@ h3 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     z-index: -1;
   }
 }
